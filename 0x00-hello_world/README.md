@@ -1,1 +1,1 @@
-a script that runs a c file through the processor
+a script that compiles a c file but does not link
