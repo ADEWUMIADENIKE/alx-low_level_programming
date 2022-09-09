@@ -1,1 +1,1 @@
-a script that printsexactly programming is like building
+a script to print exactly programming
