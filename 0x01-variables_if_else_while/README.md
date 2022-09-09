@@ -1,1 +1,1 @@
- a script that assign a randon muber
+a scrpt to complete a c program
