@@ -1,1 +1,1 @@
-a script to print exactly programming
+a script that prints exactly programming
