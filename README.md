@@ -1,1 +1,1 @@
-quote.c
+positive anything is better than negative nothing
