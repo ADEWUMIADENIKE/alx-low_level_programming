@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - entry point
- *
- * Return: alway return 0
+ * 
+ * Return: alway returns 0
 */
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 0; j <= 9; k++)
+	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
@@ -26,9 +26,9 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-				}
 			}
 		}
+	}
 	}
 	putchar('\n');
 	return (0);
