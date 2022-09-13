@@ -2,7 +2,7 @@
 /**
  * _islower - function to check for lower xcase character
  * @c: is the int that will use for the argument of the function
- * return: 0
+ * Return: 0
 */
 int _islower(int c)
 {
