@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - prints numbers given as parameters
- * @separator: string to the printed between numbers 
+ * @separator: string to the printed between numbers
  * @n: number of integers passed to the function
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
