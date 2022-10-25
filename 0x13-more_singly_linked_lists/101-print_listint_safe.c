@@ -15,13 +15,13 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		diff = head - head->next;
 		num++;
-		pintf("[%p] %d\n", (void *)head, head->n);
+		printf("[%p] %d\n", (void *)head, head->n);
 		if (diff > 0)
 			head = head->next;
 		else
 		{
 			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-break:
+	break;
 		}
 	}
 
