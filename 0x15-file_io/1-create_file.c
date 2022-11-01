@@ -4,35 +4,47 @@
  */
 
 #include "main.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 /**
- * create_file - Creates s file.
- * @filename: A pointer to the name of the file to create.
- * @text_content: A pointer to a string to write to the file.
+ * _strlen - finds the length of a string
+ * @str: pointer to the string
  *
- * Return: If the function fails - -1.
- * otherwise - 1.
+ * Return: length of the string
+ */
+size_t _strlen(char *str)
+{
+	size_t i;
+
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
+}
+
+/**
+ * create_file - creates a file.
+ * @filename: name of the file to create.
+ * @text_content: NULL terminated string to write to the file.
+ *
+ * Return: 1 on success, -1 on failure
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int fd;
+	ssize_t len = 0;
 
 	if (filename == NULL)
 		return (-1);
-
-	if (text_content != NULL)
-	{
-		for (len = 0; text_content[len];)
-			len++;
-	}
-
-	o = open(filename, O_CREAT | O_TRUNC, 0600);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	i (fd == -1)
 		return (-1);
-
-	close(0);
-
+	if (text_content != NULL)
+		len = write(fd, text_content, _strlen(text_content));
+	close(fd);
+	if (len == -1)
+		return (-1);
 	return (1);
 }
